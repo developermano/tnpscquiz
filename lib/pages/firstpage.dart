@@ -8,6 +8,22 @@ class Firstpage extends StatefulWidget {
 class _FirstpageState extends State<Firstpage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Title(
+      color: Colors.white,
+      title: 'home page',
+      child: Scaffold(
+        drawer: Drawer(),
+        body: CustomScrollView(
+          slivers: [
+            SliverAppBar(
+              toolbarHeight: 35,
+              title: Text('tnpscquiz'),
+              backgroundColor: Theme.of(context).primaryColor,
+              centerTitle: true,
+            )
+          ],
+        ),
+      ),
+    );
   }
 }
