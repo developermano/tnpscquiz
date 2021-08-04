@@ -60,7 +60,7 @@ class Carousalslider extends StatelessWidget {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(8.0),
             image: DecorationImage(
-              image: NetworkImage("https://picsum.photos/200/300"),
+              image: NetworkImage("https://picsum.photos/200/300?grayscale"),
               fit: BoxFit.cover,
             ),
           ),
