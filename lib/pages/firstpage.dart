@@ -10,13 +10,15 @@ class Firstpage extends StatefulWidget {
 }
 
 class _FirstpageState extends State<Firstpage> {
+  List pagetitle = ['homepage', 'page2', 'page3', 'page4'];
   int _currentPage = 0;
   final _pageController = PageController();
+  String titlevarible = 'homepage - tnpsc';
   @override
   Widget build(BuildContext context) {
     return Title(
       color: Colors.white,
-      title: 'home page',
+      title: titlevarible,
       child: Scaffold(
         drawer: Drawer(),
         body: PageView(
@@ -37,7 +39,10 @@ class _FirstpageState extends State<Firstpage> {
           selectedIndex: _currentPage,
           onTap: (int index) {
             _pageController.jumpToPage(index);
-            setState(() => _currentPage = index);
+            setState(() {
+              _currentPage = index;
+              titlevarible = pagetitle[index] + '-tnpsc';
+            });
           },
           items: <BottomBarItem>[
             BottomBarItem(
