@@ -23,19 +23,39 @@ Widget customhomepage(context) {
             ),
             Column(
               children: [
-                Center(
-                  child: SizedBox(
-                    height: 40,
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        primary: Theme.of(context).primaryColor,
-                        elevation: 10,
-                      ),
-                      child: Text('play quiz now'),
-                      onPressed: () {},
+                SizedBox(
+                  width: double.infinity - 100.0,
+                  height: 40,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: Theme.of(context).primaryColor,
+                      elevation: 10,
                     ),
+                    child: Text('play quiz now'),
+                    onPressed: () {},
                   ),
                 ),
+              ],
+            ),
+            Divider(
+              height: 50,
+            ),
+            Column(
+              children: [
+                SizedBox(
+                  height: 100,
+                  width: 400,
+                  child: Card(
+                    elevation: 30,
+                    child: Center(
+                        child: Text(
+                      'it is a example quotes',
+                      style: TextStyle(
+                        color: Theme.of(context).primaryColor,
+                      ),
+                    )),
+                  ),
+                )
               ],
             ),
             Divider(
