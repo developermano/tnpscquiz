@@ -2,7 +2,7 @@ import 'package:bottom_bar/bottom_bar.dart';
 import 'package:carousel_slider/carousel_options.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:tnpscquiz/widget/customhome.dart';
+import 'package:tnpscquiz/widget/export.dart';
 
 class Firstpage extends StatefulWidget {
   @override
@@ -10,7 +10,7 @@ class Firstpage extends StatefulWidget {
 }
 
 class _FirstpageState extends State<Firstpage> {
-  List pagetitle = ['homepage', 'page2', 'page3', 'page4'];
+  List pagetitle = ['homepage', 'quizpage', 'page3', 'page4'];
   int _currentPage = 0;
   final _pageController = PageController();
   String titlevarible = 'homepage - tnpsc';
@@ -25,7 +25,7 @@ class _FirstpageState extends State<Firstpage> {
           controller: _pageController,
           children: [
             customhomepage(context),
-            Container(color: Colors.red),
+            Quizpage(),
             Container(color: Colors.greenAccent.shade700),
             Container(color: Colors.orange),
           ],
@@ -51,20 +51,20 @@ class _FirstpageState extends State<Firstpage> {
               activeColor: Colors.blue,
             ),
             BottomBarItem(
-              icon: Icon(Icons.favorite),
-              title: Text('Favorites'),
+              icon: Icon(Icons.quiz_outlined),
+              title: Text('Quiz'),
               activeColor: Colors.red,
               darkActiveColor: Colors.red.shade400, // Optional
             ),
             BottomBarItem(
-              icon: Icon(Icons.person),
-              title: Text('Account'),
+              icon: Icon(Icons.data_usage),
+              title: Text('Performance'),
               activeColor: Colors.greenAccent.shade700,
               darkActiveColor: Colors.greenAccent.shade400, // Optional
             ),
             BottomBarItem(
-              icon: Icon(Icons.settings),
-              title: Text('Settings'),
+              icon: Icon(Icons.supervised_user_circle),
+              title: Text('Profile'),
               activeColor: Colors.orange,
             ),
           ],

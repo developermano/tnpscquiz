@@ -38,7 +38,7 @@ Widget customhomepage(context) {
               ],
             ),
             Divider(
-              height: 50,
+              height: 30,
             ),
             Column(
               children: [
