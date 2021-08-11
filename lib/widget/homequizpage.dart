@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tnpscquiz/widget/appbar.dart';
-import 'package:tnpscquiz/widget/customdrawer.dart';
+import 'export.dart';
 
 class Quizpage extends StatefulWidget {
   @override

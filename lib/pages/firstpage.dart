@@ -10,7 +10,7 @@ class Firstpage extends StatefulWidget {
 }
 
 class _FirstpageState extends State<Firstpage> {
-  List pagetitle = ['homepage', 'quizpage', 'page3', 'page4'];
+  List pagetitle = ['homepage', 'quizpage', 'performance', 'page4'];
   int _currentPage = 0;
   final _pageController = PageController();
   String titlevarible = 'homepage - tnpsc';
@@ -25,7 +25,7 @@ class _FirstpageState extends State<Firstpage> {
           children: [
             customhomepage(context),
             Quizpage(),
-            Container(color: Colors.greenAccent.shade700),
+            Performacepage(),
             Container(color: Colors.orange),
           ],
           onPageChanged: (index) {
