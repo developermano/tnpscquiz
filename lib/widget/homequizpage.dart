@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:tnpscquiz/widget/appbar.dart';
+import 'package:tnpscquiz/widget/customdrawer.dart';
 
 class Quizpage extends StatefulWidget {
   @override
@@ -9,15 +11,10 @@ class _QuizpageState extends State<Quizpage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        drawer: Drawer(),
+        drawer: Customdrawer(),
         body: CustomScrollView(
           slivers: [
-            SliverAppBar(
-              toolbarHeight: 35,
-              title: Text('tnpscquiz'),
-              backgroundColor: Colors.red,
-              centerTitle: true,
-            ),
+            Customappbar(),
             SliverToBoxAdapter(
                 child: Column(
               children: [
@@ -28,6 +25,28 @@ class _QuizpageState extends State<Quizpage> {
                   child: Row(
                     children: [
                       Container(
+                        child: Column(
+                          children: [
+                            Container(
+                              height: 50,
+                            ),
+                            Text(
+                              '100',
+                              style: TextStyle(
+                                color: Colors.blue,
+                              ),
+                            ),
+                            Container(
+                              height: 10,
+                            ),
+                            Text(
+                              'average score',
+                              style: TextStyle(
+                                color: Colors.blue,
+                              ),
+                            ),
+                          ],
+                        ),
                         height: 150,
                         width: 110,
                         margin:
@@ -38,6 +57,28 @@ class _QuizpageState extends State<Quizpage> {
                                 BorderRadius.all(Radius.circular(10))),
                       ),
                       Container(
+                        child: Column(
+                          children: [
+                            Container(
+                              height: 50,
+                            ),
+                            Text(
+                              '75',
+                              style: TextStyle(
+                                color: Colors.blue,
+                              ),
+                            ),
+                            Container(
+                              height: 10,
+                            ),
+                            Text(
+                              'this month\n    score',
+                              style: TextStyle(
+                                color: Colors.blue,
+                              ),
+                            ),
+                          ],
+                        ),
                         height: 150,
                         width: 110,
                         margin:
@@ -48,6 +89,28 @@ class _QuizpageState extends State<Quizpage> {
                                 BorderRadius.all(Radius.circular(10))),
                       ),
                       Container(
+                        child: Column(
+                          children: [
+                            Container(
+                              height: 50,
+                            ),
+                            Text(
+                              '45',
+                              style: TextStyle(
+                                color: Colors.blue,
+                              ),
+                            ),
+                            Container(
+                              height: 10,
+                            ),
+                            Text(
+                              'last score',
+                              style: TextStyle(
+                                color: Colors.blue,
+                              ),
+                            ),
+                          ],
+                        ),
                         height: 150,
                         width: 110,
                         margin:
@@ -70,7 +133,52 @@ class _QuizpageState extends State<Quizpage> {
                 ),
                 Divider(
                   height: 20,
-                )
+                ),
+                Container(
+                    margin: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+                    height: 100,
+                    child: Card(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30.0),
+                        ),
+                        color: Colors.blueAccent,
+                        elevation: 20,
+                        child: Center(
+                            child: Text(
+                          'playquiz',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, color: Colors.white),
+                        )))),
+                Container(
+                    margin: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+                    height: 100,
+                    child: Card(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30.0),
+                        ),
+                        color: Colors.blueAccent,
+                        elevation: 20,
+                        child: Center(
+                            child: Text(
+                          'playquiz - category',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, color: Colors.white),
+                        )))),
+                Container(
+                    margin: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+                    height: 100,
+                    child: Card(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30.0),
+                        ),
+                        color: Colors.blueAccent,
+                        elevation: 20,
+                        child: Center(
+                            child: Text(
+                          'playquiz - play with our friends',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, color: Colors.white),
+                        )))),
               ],
             )),
           ],

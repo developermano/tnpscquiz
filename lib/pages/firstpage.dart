@@ -20,7 +20,6 @@ class _FirstpageState extends State<Firstpage> {
       color: Colors.white,
       title: titlevarible,
       child: Scaffold(
-        drawer: Drawer(),
         body: PageView(
           controller: _pageController,
           children: [
