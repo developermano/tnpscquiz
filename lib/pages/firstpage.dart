@@ -57,7 +57,7 @@ class _FirstpageState extends State<Firstpage> {
             ),
             BottomBarItem(
               icon: Icon(Icons.data_usage),
-              title: Text('Performance'),
+              title: Text('charts'),
               activeColor: Colors.greenAccent.shade700,
               darkActiveColor: Colors.greenAccent.shade400, // Optional
             ),

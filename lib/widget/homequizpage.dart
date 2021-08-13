@@ -39,7 +39,7 @@ class _QuizpageState extends State<Quizpage> {
                               height: 10,
                             ),
                             Text(
-                              'average score',
+                              'average \n score',
                               style: TextStyle(
                                 color: Colors.blue,
                               ),
@@ -47,7 +47,7 @@ class _QuizpageState extends State<Quizpage> {
                           ],
                         ),
                         height: 150,
-                        width: 110,
+                        width: 90,
                         margin:
                             EdgeInsets.symmetric(vertical: 20, horizontal: 20),
                         decoration: BoxDecoration(
@@ -79,7 +79,7 @@ class _QuizpageState extends State<Quizpage> {
                           ],
                         ),
                         height: 150,
-                        width: 110,
+                        width: 90,
                         margin:
                             EdgeInsets.symmetric(vertical: 20, horizontal: 20),
                         decoration: BoxDecoration(
@@ -87,38 +87,6 @@ class _QuizpageState extends State<Quizpage> {
                             borderRadius:
                                 BorderRadius.all(Radius.circular(10))),
                       ),
-                      Container(
-                        child: Column(
-                          children: [
-                            Container(
-                              height: 50,
-                            ),
-                            Text(
-                              '45',
-                              style: TextStyle(
-                                color: Colors.blue,
-                              ),
-                            ),
-                            Container(
-                              height: 10,
-                            ),
-                            Text(
-                              'last score',
-                              style: TextStyle(
-                                color: Colors.blue,
-                              ),
-                            ),
-                          ],
-                        ),
-                        height: 150,
-                        width: 110,
-                        margin:
-                            EdgeInsets.symmetric(vertical: 20, horizontal: 20),
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(10))),
-                      )
                     ],
                   ),
                   margin:
